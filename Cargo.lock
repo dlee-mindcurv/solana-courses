@@ -3189,6 +3189,14 @@ dependencies = [
 [[package]]
 name = "solana-instructions"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "solana-client",
+ "solana-commitment-config",
+ "solana-sdk",
+ "solana-system-interface",
+ "tokio",
+]
 
 [[package]]
 name = "solana-instructions-sysvar"
