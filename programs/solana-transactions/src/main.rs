@@ -41,7 +41,7 @@ async fn example_transaction_structure() -> Result<()> {
 
     let tarnsfer_signature = connection.send_and_confirm_transaction(&transfer_transaction).await?;
 
-    println!("tarnsfer_signature: {:#?}", transfer_transaction);
+    println!("tarnsfer_signature: {:#?}", tarnsfer_signature);
 
 
 
