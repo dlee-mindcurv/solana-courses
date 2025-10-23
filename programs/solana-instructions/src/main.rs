@@ -7,7 +7,7 @@ use solana_sdk::transaction::Transaction;
 use solana_system_interface::instruction::transfer;
 
 fn main() -> Result<()> {
-    // example_transfer_instruction()
+    example_transfer_instruction();
     create_instruction_example()
 }
 
