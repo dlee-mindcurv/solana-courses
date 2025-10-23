@@ -4225,6 +4225,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-transactions"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "solana-client",
+ "solana-commitment-config",
+ "solana-sdk",
+ "solana-system-interface",
+ "tokio",
+]
+
+[[package]]
 name = "solana-udp-client"
 version = "3.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
