@@ -35,7 +35,7 @@ async fn set_culimit_and_cu_price() -> Result<()> {
     let price_instruction = ComputeBudgetInstruction::set_compute_unit_price(1);
 
     let transfer_amount = LAMPORTS_PER_SOL / 100;
-    let transfer_instruction = transfer(&sender.pubkey(), &recipient.pubkey(), transfer_amount);
+    let transfer_instruction = transfer(&sender.pubkey().into(), &recipient.pubkey(), transfer_amount);
 
     let recent_blockhash = client.get_latest_blockhash().await?;
 

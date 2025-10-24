@@ -1,9 +1,10 @@
 [workspace]
+resolver = "3"
+
 members = [
-    "common",
     "programs/solana-account-model",
     "programs/solana-instructions"
-, "programs/solana-transaction-fees",   "programs/solana-transactions"]
+, "programs/solana-program-derived-addresses", "programs/solana-transaction-fees",   "programs/solana-transactions"]
 [workspace.dependencies]
 anyhow = "1.0.100"
 tokio = "1.48.0"
