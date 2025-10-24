@@ -6,14 +6,15 @@ use solana_sdk::signature::{Keypair, Signer};
 use solana_sdk::transaction::Transaction;
 use solana_system_interface::instruction::transfer;
 
-fn main() -> Result<()> {
-    example_transfer_instruction();
-    create_instruction_example()
+#[tokio::main]
+async fn main() -> Result<()> {
+    example_transfer_instruction().await?;
+    create_instruction_example().await
 }
 
 const RPC_URL_LOCAL: &str = "http://localhost:8899";
 
-#[tokio::main]
+
 async fn example_transfer_instruction() -> Result<()> {
     //create a client connection
     let client =
@@ -77,7 +78,7 @@ async fn example_transfer_instruction() -> Result<()> {
     Ok(())
 }
 
-#[tokio::main]
+
 async fn create_instruction_example() -> Result<()> {
     //create sender
     let sender = Keypair::new();

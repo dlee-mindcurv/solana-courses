@@ -3,7 +3,7 @@ members = [
     "common",
     "programs/solana-account-model",
     "programs/solana-instructions"
-,   "programs/solana-transactions"]
+, "programs/solana-transaction-fees",   "programs/solana-transactions"]
 [workspace.dependencies]
 anyhow = "1.0.100"
 tokio = "1.48.0"
@@ -13,3 +13,4 @@ solana-sdk = "3.0.0"
 bincode = "1.3.3"
 solana-system-interface = "2.0.0"
 spl-token-2022-interface = "2.0.0"
+solana-compute-budget-interface = "3.0.0"
