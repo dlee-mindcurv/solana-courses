@@ -1,0 +1,13 @@
+[package]
+name = "solana-transaction-fees"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio.workspace = true
+anyhow.workspace = true
+solana-client.workspace = true
+solana-sdk.workspace = true
+solana-compute-budget-interface.workspace = true
+solana-commitment-config.workspace = true
+solana-system-interface.workspace = true

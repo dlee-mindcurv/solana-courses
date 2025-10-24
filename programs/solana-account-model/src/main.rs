@@ -16,21 +16,23 @@ use spl_token_2022_interface::{
 };
 
 
-fn main() -> Result<()> {
+#[tokio::main]
+async fn main() -> Result<()> {
     // Generate a new keypair (Account) ownd System_Program (11111111111111111111111111111111)
-    system_program_account();
+    system_program_account().await?;
 
     // access clock from the sysvar accounts (Sysvar Account) ownned by Sysvar program
-    sysvar_account();
+    sysvar_account().await?;
 
     // create, update state of  new programs (Program Account) ownned by BPFLoader program
-    program_account();
+    program_account().await?;
 
-    data_account()
+    data_account().await
 
 }
 
-#[tokio::main]
+
+
 async fn system_program_account() -> Result<()> {
     let local_rpc_url: String = String::from("http://localhost:8899");
 
@@ -65,7 +67,6 @@ async fn system_program_account() -> Result<()> {
 // Rent
 //EpochRewards
 
-#[tokio::main]
 async fn sysvar_account() -> Result<()> {
     let local_rpc_url: String = String::from("http://localhost:8899");
 
@@ -86,7 +87,6 @@ async fn sysvar_account() -> Result<()> {
     Ok(())
 }
 
-#[tokio::main]
 async fn program_account() -> Result<()> {
     let connection = RpcClient::new_with_commitment(
         "https://api.mainnet-beta.solana.com".to_string(),
@@ -101,7 +101,6 @@ async fn program_account() -> Result<()> {
     Ok(())
 }
 
-#[tokio::main]
 async fn data_account() -> Result<()> {
     // Create connection to local validator
     let client = RpcClient::new_with_commitment(
